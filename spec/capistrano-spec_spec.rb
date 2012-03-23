@@ -1,7 +1,13 @@
-require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
+require 'spec_helper'
 
-describe "CapistranoSpec" do
-  it "fails" do
-    fail "hey buddy, you should probably rename this file and start specing for real"
+describe Capistrano::Spec do
+  it { described_class.should be_a Module }
+end
+
+describe Capistrano::Spec::Matchers do
+  it { described_class.should be_a Module }
+
+  it 'should be able to extend Capistrano::Configuration' do
+    expect { Capistrano::Configuration.extend(described_class) }.to_not raise_exception
   end
 end

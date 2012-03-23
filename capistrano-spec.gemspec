@@ -16,4 +16,5 @@ Gem::Specification.new do |gem|
   gem.version       = Capistrano::Spec::VERSION
 
   gem.add_dependency 'rspec', '~> 2.9.0'
+  gem.add_dependency 'capistrano', '>= 2'
 end
